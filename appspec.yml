@@ -5,7 +5,7 @@ files:
       destination: /home/ec2-user
     - source: /server
       destination: /home/ec2-user
-    - /.docker
+    - source: /.docker
       destination: /home/ec2-user
 # hooks:
 #   BeforeInstall:
