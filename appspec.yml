@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 files:
     - source: /client
-      destination: /home/ec2-user
+      destination: /home/ec2-user/client
     - source: /server
-      destination: /home/ec2-user
+      destination: /home/ec2-user/server
     - source: /.docker
-      destination: /home/ec2-user
+      destination: /home/ec2-user/.docker
 # hooks:
 #   BeforeInstall:
 #     - location: scripts/install_dependencies
