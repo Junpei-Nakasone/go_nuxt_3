@@ -11,4 +11,4 @@ RUN apk update && \
 
 RUN yarn install
 
-CMD yarn run dev
+# CMD yarn run dev
