@@ -27,12 +27,12 @@
 
 <script>
 export default {
-    async asyncData({ app }) {
-        const res = await app.$axios.get("http://localhost:8080/todos")
-        return {
-            createdMsg: res.data.todos
-        }
-    },
+    // async asyncData({ app }) {
+    //     const res = await app.$axios.get("http://localhost:8080/todos")
+    //     return {
+    //         createdMsg: res.data.todos
+    //     }
+    // },
     data: function() {
         return {
             msg: "",
@@ -40,12 +40,12 @@ export default {
             name: ""
         }
     },
-    // created: {
-        
-    // },
+    created: function() {
+        this.$axios.get('http://localhost:8080/todos').then(res => this.createdMsg = res.data.msg)  
+    },
     methods: {
         getMessage() {
-            const res = this.$axios.get("http://localhost:8080/hello").then(res => this.msg = res.data)
+            const res = this.$axios.get('http://localhost:8080/hello').then(res => this.msg = res.data)
         },
         newTodo() {
             this.$axios.post('http://localhost:8080/newTodo', {
