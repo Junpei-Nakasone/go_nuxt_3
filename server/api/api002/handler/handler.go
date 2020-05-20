@@ -25,6 +25,7 @@ func AddTodo(c echo.Context) error {
 
 func addTodo(param domain.Todo) error {
 	db := db.CreateDBConnection()
+	defer db.Close()
 
 	data := domain.Todo{
 		Name: param.Name,

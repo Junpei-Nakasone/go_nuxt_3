@@ -12,8 +12,8 @@
         <hr>
         <div>
             <br>
-        <!-- <button @click="getMessage()">Hello</button>
-        <h2>{{ msg }}</h2> -->
+        <button @click="getMessage()">Hello</button>
+        <h2>{{ msg }}</h2>
         <!-- <hr> -->
         <h2 class="subtitle">Add Todo</h2>
         <form v-on:submit="newTodo">
@@ -41,7 +41,7 @@ export default {
         }
     },
     created: function() {
-        this.$axios.get('http://localhost:8080/todos').then(res => this.createdMsg = res.data.msg)  
+        this.$axios.get('http://localhost:8080/todos').then(res => this.createdMsg = res.data.todos)  
     },
     methods: {
         getMessage() {

@@ -1,6 +1,8 @@
 package db
 
 import (
+	"fmt"
+
 	"github.com/jinzhu/gorm"
 	// mysql driver
 	_ "github.com/jinzhu/gorm/dialects/mysql"
@@ -8,8 +10,9 @@ import (
 
 // CreateDBConnection returns db connection
 func CreateDBConnection() *gorm.DB {
-	db, err := gorm.Open("mysql", "root:root@tcp(127.0.0.1:3306)/go_app")
+	db, err := gorm.Open("mysql", "root:root@tcp(mysql-container:3306)/go_app")
 	if err != nil {
+		fmt.Println("error in db connection")
 		return db
 	}
 
