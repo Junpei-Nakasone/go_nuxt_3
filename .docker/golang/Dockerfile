@@ -16,3 +16,5 @@ ENV TZ = Asia/Tokyo
 # COPY ../server/go.sum /go/src/go.sum
 
 RUN go mod download
+
+CMD ["go", "run", "main.go"]

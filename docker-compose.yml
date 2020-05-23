@@ -4,18 +4,18 @@ services:
   golang:
     build:
       context: ./
-      dockerfile: golang/Dockerfile
+      dockerfile: .docker/golang/Dockerfile
     volumes:
-      - ../server:/go/src
+      - ./server:/go/src
     ports:
       - "8080:8080"
     tty: true
   nuxt:
     build:
       context: ./
-      dockerfile: nuxt/Dockerfile
+      dockerfile: .docker/nuxt/Dockerfile
     volumes:
-      - ../client:/nuxt
+      - ./client:/nuxt
     ports:
       - "3000:3000"
     tty: true
