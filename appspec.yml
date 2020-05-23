@@ -7,6 +7,8 @@ files:
       destination: /home/ec2-user/server
     - source: /.docker
       destination: /home/ec2-user/.docker
+    - source: /docker-compose.yml
+      destination: /home/ec2-user/
 # hooks:
 #   BeforeInstall:
 #     - location: scripts/install_dependencies
