@@ -9,6 +9,6 @@ RUN apk update && \
     apk add --update yarn && \
     rm -rf /var/cache/apk/*
 
-RUN yarn install
+# RUN yarn install
 
-CMD yarn run dev
+# CMD yarn run dev
